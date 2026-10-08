@@ -1,0 +1,25 @@
+# Backend Ouvidoria Ativa (Django 5.2)
+# Instalação: python -m venv venv && source venv/bin/activate && pip install -r requirements.txt
+#
+# Debian/Ubuntu: antes do mysqlclient, instale dependências de sistema, por exemplo:
+#   sudo apt install python3-dev default-libmysqlclient-dev build-essential pkg-config
+
+Django==5.2.6
+djangorestframework==3.16.1
+djangorestframework_simplejwt==5.5.1
+django-cors-headers==4.8.0
+django-filter==25.1
+python-dotenv==1.1.1
+mysqlclient==2.2.7
+requests==2.32.5
+gunicorn==23.0.0
+
+# Scripts em scripts/ (anonimização TCESP — opcional se não for rodar o pipeline)
+openpyxl==3.1.5
+pandas==2.3.3
+presidio_analyzer==2.2.362
+presidio_anonymizer==2.2.362
+spacy==3.8.14
+
+# Modelo spaCy para português (após pip install -r requirements.txt):
+#   python -m spacy download pt_core_news_lg
